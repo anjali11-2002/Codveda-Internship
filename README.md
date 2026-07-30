@@ -1,3 +1,4 @@
+
 # Simple Calculator
 
 # Description
@@ -19,3 +20,7 @@
 
 # Author
     Anjali Verma
+
+# Codveda-Internship
+A collection of Python projects developed during my Codveda Technologies Internship.
+
