@@ -1,0 +1,38 @@
+body{
+    font-family:Arial;
+    background:#f5f5f5;
+}
+
+.container{
+    width:500px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px gray;
+}
+
+h1{
+    text-align:center;
+}
+
+input{
+    width:75%;
+    padding:10px;
+}
+
+button{
+    padding:10px;
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.task{
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    margin-top:10px;
+    background:#eeeeee;
+}
