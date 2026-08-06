@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1><i class="fa-solid fa-cloud-sun"></i> Weather App</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input
+            type="text"
+            name="city"
+            placeholder="Enter City Name"
+            required>
+
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red; font-weight:bold;">
+            {{ error }}
+        </p>
+    {% endif %}
+
+    {% if weather %}
+    <div class="weather-card">
+
+        <h2>📍 {{ weather.city }}</h2>
+
+        <h3>🌡 {{ weather.temperature }}°C</h3>
+
+        <p>☁ {{ weather.description }}</p>
+
+        <hr>
+
+        <p>💧 Humidity : {{ weather.humidity }}%</p>
+
+        <p>🌬 Wind : {{ weather.wind }} km/h</p>
+
+        <p>🤗 Feels Like : {{ weather.feels_like }}°C</p>
+
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
